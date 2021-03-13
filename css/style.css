@@ -469,7 +469,7 @@ body {
 @media screen and (max-width:460px) {
     .modal {
         width: 60%;
-        height: 85%;
+        /* height: 85%; */
     }
 
     .modal__title {
