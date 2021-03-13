@@ -1,0 +1,507 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HERO */
+.header {
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.hero {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    max-width: 200px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title__subtitle p {
+    margin: 0;
+    font-size: 20px;
+    color: #272727;
+    text-align: center;
+    line-height: 26px;
+}
+
+/* END HERO */
+
+/* MAIN */
+
+.offer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    text-decoration: none;
+    max-width: 270px;
+    justify-content: space-around;
+    margin: 20px 10px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    color: #000;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card__btn:hover {
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.35);
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.63);
+}
+
+.card__logo {
+    width: 100%;
+    background-color: #006CE7;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card:nth-child(-n+3)::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/icon1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.card:nth-child(2)::before {
+    background-image: url(../img/icon2.png);
+}
+
+.card:nth-child(3)::before {
+    background-image: url(../img/icon3.png);
+}
+
+.card__logo img {
+    max-width: 200px;
+    max-height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.card__title {
+    text-align: center;
+    padding: 0px 20px;
+    opacity: .6;
+    font-weight: 300;
+    font-size: 16px;
+    color: #3D3D3D;
+    background-color: rgba(0, 108, 231, .3);
+}
+
+.card__title p {
+    margin: 0;
+    padding: 10px 0px;
+}
+
+
+.card__desc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card__desc p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.card__desc span {
+    font-weight: 300;
+}
+
+.card__desc--procent,
+.card__desc--money,
+.card__desc--age {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 40px 0px;
+}
+
+.card__desc--procent:before {
+    width: 10px;
+    height: 10px;
+    top: 47%;
+    transform: translateY(-55%);
+    left: 17px;
+    content: "";
+    position: absolute;
+    background-image: url(../img/card.svg);
+
+}
+
+.card__desc--money::before {
+    width: 10px;
+    height: 10px;
+    top: 58%;
+    transform: translateY(-50%);
+    left: 16px;
+    content: "";
+    position: absolute;
+    background-image: url(../img/money.svg);
+}
+
+.card__desc--age::before {
+    width: 10px;
+    height: 10px;
+    top: 68%;
+    transform: translateY(-48%);
+    left: 16px;
+    content: "";
+    position: absolute;
+    background-image: url(../img/people.svg);
+}
+
+.card__btn {
+    width: 66%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #006CE7;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    line-height: 13px;
+    margin: 15px 0px 0px;
+}
+
+/* END MAIN */
+
+/* FOOTER */
+.footer {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 20px 0;
+    color: #272727;
+}
+
+.footer span {
+    font-size: 12px
+}
+
+/* Footer End */
+
+/* Modal */
+.modal {
+    position: relative;
+    padding-bottom: 20px;
+    width: 450px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 0 20px
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+}
+
+.icon-fire {
+    position: relative;
+    text-align: center;
+}
+
+.icon-fire {
+    margin: 0 auto;
+    margin-top: -15px;
+    position: relative;
+}
+
+.modal__title {
+    width: 100%;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.modal__title h4 {
+    margin: 0;
+}
+
+.modal__subtitle {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.modal__offer {
+    display: flex;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.modal__offer--logo {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color: #68451D;
+}
+
+.modal__offer--logo img {
+    max-width: 150px;
+}
+
+.modal__offer--text {
+    color: #191919;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.modal__offer--btn {
+    margin: 0;
+    line-height: 36px;
+    border-radius: 0;
+    background-color: #4DC07B;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 130px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.modal__close {
+    font-size: 19px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End Modal */
+.viber_chat {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    cursor: pointer;
+    background-color: #665cac;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/viber.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70%;
+    border-radius: 50%
+}
+
+/* Push */
+.push_block {
+    width: 300px;
+    height: 72px;
+    background-image: linear-gradient(#273EBC, #D638DA);
+    border-radius: 20px 0px 0px 20px;
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    text-align: right;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #272727;
+}
+
+.white_block {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 295px;
+    height: 67px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #fff;
+    padding: 0 20px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.image_block {
+    width: 25px;
+}
+
+.text_block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 295px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: #fff;
+    /* padding: 0 20px; */
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+.text_block p {
+    margin: 0px;
+}
+
+.bg-moneyveo {
+    background-color: #74b23a;
+    ;
+}
+
+/* Ens Push */
+
+/* Media*/
+@media screen and (max-width:256px) {
+    .title {
+        font-size: 12px;
+    }
+
+    .title__subtitle p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .card__desc--procent,
+    .card__desc--money,
+    .card__desc--age {
+        margin: 8px 30px 0px;
+        font-size: 12px;
+    }
+
+    .card__desc--procent:before {
+        top: 50%;
+    }
+
+    .card__desc--age::before {
+        top: 65%;
+    }
+
+    .card__desc--money::before {
+        transform: translateY(-58%);
+    }
+
+    .card__title {
+        font-size: 12px;
+    }
+
+    .card__logo img {
+        max-width: 150px;
+    }
+
+    .card:nth-child(-n+3)::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .card__btn {
+        font-size: 12px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+
+    .footer span {
+        font-size: 10px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:460px) {
+    .modal {
+        width: 60%;
+        height: 85%;
+    }
+
+    .modal__title {
+        font-size: 12px;
+    }
+
+    .modal__subtitle {
+        font-size: 10px;
+    }
+
+    .modal__offer {
+        width: 100%;
+        height: 9%;
+    }
+
+    .modal__offer--logo {
+        padding: 5px 10px;
+    }
+
+    .modal__offer--logo img {
+        max-width: 67px;
+    }
+
+    .modal__offer--text {
+        font-size: 8px;
+    }
+
+    .card__btn {
+        font-size: 10px;
+    }
+
+    .modal__offer--btn {
+        width: 38%;
+        line-height: 10px;
+    }
+
+    .modal__close {
+        font-size: 12px;
+    }
